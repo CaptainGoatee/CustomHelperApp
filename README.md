@@ -4,6 +4,8 @@
 
 A comprehensive help and guidance application for the California Roleplay FiveM server, integrated with the lb-phone framework.
 
+This is specifically made for CaliRP but can easily be forked and changed.
+
 ## Description
 
 This resource adds a custom app to the lb-phone that provides new players with essential information about:
