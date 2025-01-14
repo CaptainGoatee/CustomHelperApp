@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>CaliRP Help & Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="colors.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="phone-wrapper">
+        <div class="app" id="content">
+            <div class="app-wrapper">
+                <h2>What is California Roleplay?</h2>
+                <p>
+                    California Roleplay is a FiveM community that provides realistic Roleplay to our players. We
+                    expect all players to role-play, meaning to stay in character with whatever persona you
+                    choose to play with. We know there is a lot to cover in the information below but please
+                    read through this in its entirety. There is a lot of good information that can be found in
+                    these FAQs. California Roleplay is not a GTA Online server. 
+                </p>
+                <p style="color: rgb(255, 65, 65);">VDM AND RDM IS EXTREMELY PROHIBITED WITHIN OUR SERVER.</p>
+                <p>
+                    Random Death Match (RDM) refers to going up to another player and killing them with no intended
+                    roleplay or reasoning
+                    behind it.
+
+                    Vehicle Death Match (VDM) refers to taking your car and using it with the intent to kill without a
+                    purpose/reason. Do not
+                    ram into other vehicles for no reason.
+                </p>
+
+                <div class="button-wrapper">
+                    <button id="goHome">Return to Menu</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="dev.js"></script>
+    <script>
+        window.addEventListener('message', (e) => {
+            if (e.data === 'componentsLoaded') {
+                const script = document.createElement('script');
+                script.src = 'about.js';
+                document.body.appendChild(script);
+            }
+        });
+    </script>
+</body>
+
+</html>
+<style>
+    .app-wrapper {
+        color: var(--text-primary);
+    }
+</style>

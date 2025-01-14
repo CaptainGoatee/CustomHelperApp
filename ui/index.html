@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>CaliRP Help & Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="colors.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="phone-wrapper">
+        <div class="app" id="content">
+            <div class="app-wrapper">
+                <div class="header">
+                    <img src="assets/cali-128.png" alt="cali">
+                    <div class="title">California Roleplay</div>
+                    <div class="subtitle">Help & Guidance</div>
+                </div>
+                <div class="button-wrapper">
+                    <button id="btn_aboutUs">About CaliRP</button>
+                    <button id="btn_newmember">Get Started</button>
+                    <button id="btn_chatCommands">Chat Commands</button>
+                    <button id="btn_voicechat">Using VoiceChat</button>
+                    <button id="btn_terminology">In-Game Terminology</button>
+                    <button id="btn_commonKeybinds">Common Keybinds</button>
+                    <button id="btn_commonIssues">Common Issues</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dev.js"></script>
+    <script>
+        window.addEventListener('message', (e) => {
+            if (e.data === 'componentsLoaded') {
+                const script = document.createElement('script');
+                script.src = 'script.js';
+                document.body.appendChild(script);
+            }
+        });
+    </script>
+</body>
+
+</html>

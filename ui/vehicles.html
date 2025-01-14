@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>CaliRP Help & Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="colors.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="phone-wrapper">
+        <br>
+        <div class="app" id="content">
+            <div class="app-wrapper">
+
+                <body>
+
+                    <p> <span style="font-weight: bolder;">Spawning Vehicles & Vehicle Customization: </span>
+                        When spawning in vehicles, you must go through the following process:
+                        <br><span style="font-weight: bolder;">Step 1: </span>
+                        Press F1 and navigate to "Vehicle Related Options"
+                        <br><span style="font-weight: bolder;">Step 2a: </span>
+                        If spawning through spawncode, go to Vehicle Spawner and go to "Spawn Vehicle by Model Name"
+                        then
+                        type in the spawncode, and press ENTER
+                        <br><span style="font-weight: bolder;">Step 2b: </span>
+                        f spawning a saved vehicle, go to "Saved Vehicles" and then go to the vehicle class that your
+                        car is
+                        listed under in our server <br><br>
+                        When customizing vehicles, you must go through the following process:
+                        <br><span style="font-weight: bolder;">Step 1: </span>
+                        Once in a vehicle, navigate to "Vehicle Related Options"
+                        <br><span style="font-weight: bolder;">Step 2: </span>
+                        Depending on the modification you would either select Vehicle Colors, Mod Menu, Vehicle Extras,
+                        or
+                        Vehicle Neon Kits and then customize those options to your liking
+                    </p>
+                    <div class="button-wrapper">
+                        <button id="goHome">Return to Menu</button>
+                    </div>
+
+                </body>
+            </div>
+        </div>
+    </div>
+
+    <script src="dev.js"></script>
+    <script>
+        window.addEventListener('message', (e) => {
+            if (e.data === 'componentsLoaded') {
+                const script = document.createElement('script');
+                script.src = 'getstarted.js';
+                document.body.appendChild(script);
+            }
+        });
+    </script>
+</body>
+
+</html>
+<style>
+    .header {
+        top: 20%;
+    }
+
+    .app-wrapper {
+        color: var(--text-primary);
+        top: 35px;
+        padding-top: 5px;
+    }
+</style>

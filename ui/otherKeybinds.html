@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>CaliRP Help & Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="colors.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="phone-wrapper">
+        <br>
+        <div class="app" id="content">
+            <div class="app-wrapper">
+                <p><span style="font-weight: bolder;">Y - </span>
+                    When pressing Y on your keyboard, this will open a menu specific for your character which will give
+                    you the option to take off any piece of clothing, jewelry, vests, or any piece of clothing that is
+                    attached to your FiveM Character
+                </p>
+                <p><span style="font-weight: bolder;">M - </span>
+                    This menu serves a few different purposes for Civilians and Law Enforcement within our community,
+                    this menu can be used at any time within the server as long as it's used with the intent to follow
+                    rules and abide roleplay and not break server rules.
+                </p>
+                <p><span style="font-weight: bolder;">T - </span>
+                    This is how you chat in the game and use various chat commands in our server. We will cover various
+                    chat commands below that will help in your role play experience here at California Roleplay.
+                </p>
+                <p><span style="font-weight: bolder;">L - </span>
+                    This hides the chat window. If you are in the middle of RP and you want to hide chat, press L.
+                    Pressing L again will un-hide the chat window while playing in our servers.
+                </p>
+                <p><span style="font-weight: bolder;">X - </span>
+                    Holding X will put your character's hands up.
+                </p>
+                <p><span style="font-weight: bolder;">U - </span>
+                    This will cause you to fall over. Press U again to stand back up.
+                </p>
+                <p><span style="font-weight: bolder;">CTRL - </span>
+                    To crouch down, press CTRL on your keyboard.
+                </p>
+                <p><span style="font-weight: bolder;">SPACE BAR - </span>
+                    This will make your character jump.
+                </p>
+                <div class="button-wrapper">
+                    <button id="returnToKeys">Return to Keybinds</button>
+                    <button style="visibility: hidden;" id="goHome">Return to Menu</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="dev.js"></script>
+    <script>
+        window.addEventListener('message', (e) => {
+            if (e.data === 'componentsLoaded') {
+                const script = document.createElement('script');
+                script.src = 'keybinds.js';
+                document.body.appendChild(script);
+            }
+        });
+    </script>
+</body>
+
+</html>
+<style>
+    .header {
+        top: 20%;
+    }
+
+    .app-wrapper {
+        color: var(--text-primary);
+        top: 35px;
+        padding-top: 5px;
+    }
+</style>

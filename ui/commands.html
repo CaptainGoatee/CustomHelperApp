@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>CaliRP Help & Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="colors.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="phone-wrapper">
+        <div class="app" id="content">
+            <div class="app-wrapper">
+                <div class="header">
+                    <div class="title">California Roleplay</div>
+                    <div class="subtitle">Chat Commands</div>
+                </div>
+                <p><span style="font-weight: bolder;">/me</span> - Used when doing an action - appears over your body.
+                    Ex:
+                    /me Grabs Wallet <br>
+                    <span style="font-weight: bolder;">/gme</span> - Same as /me but global. Appears in game chat.<br>
+                    <span style="font-weight: bolder;">/twt</span> - In-Game Twitter function.
+                    Ex: /twt The bank is being robbed at postal 4000!<br>
+                    <span style="font-weight: bolder;">/fevpn</span> - Same as Twitter but not visible to Law
+                    Enforcement.
+                    Ex: /fevpn selling drugs at postal 3000<br>
+                    <span style="font-weight: bolder;">/e</span> - For emotes in our server, Press F3 to get their
+                    shortcuts.<br>
+                    <span style="font-weight: bolder;">/dv</span> - Stand next to any vehicle in our server to delete
+                    it. Please roleplay this out.
+                    <br>
+                    <span style="font-weight: bolder;">/help</span> - For a list of these commands any-time in-game.
+                    <br>
+                    <span style="font-weight: bolder;">/calladmin</span> - Used to request staff assistance. Ex:
+                    /calladmin I got RDMed by ID 192
+                    <br>
+                    <span style="font-weight: bolder;">/headtag</span> - Used to change the headtag above your player.
+                    To blank it out, do /headtag 1<br>
+                    <span style="font-weight: bolder;">/gangtag</span> - Same as above, for gangs. Blank do: /gangtag
+                    1<br>
+                    <span style="font-weight: bolder;">/radio</span> - This is a feature we have in game that gives
+                    members access to a toggleable radio if you wanted to go into a specific channel and talk privately
+                    in-game without having to be in a vc!!<br>
+                </p>
+
+                <div class="button-wrapper">
+                    <button id="goHome">Return to Menu</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="dev.js"></script>
+    <script>
+        window.addEventListener('message', (e) => {
+            if (e.data === 'componentsLoaded') {
+                const script = document.createElement('script');
+                script.src = 'about.js';
+                document.body.appendChild(script);
+            }
+        });
+    </script>
+</body>
+
+</html>
+<style>
+    .app-wrapper {
+        color: var(--text-primary);
+    }
+</style>

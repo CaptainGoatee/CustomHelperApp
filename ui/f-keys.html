@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>CaliRP Help & Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="colors.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="phone-wrapper">
+        <br>
+        <div class="app" id="content">
+            <div class="app-wrapper">
+                <p><span style="font-weight: bolder;">F1 - </span>
+                    VMenu has 2 key sections: Character Customization, which allows you to customize your
+                    character's appearance, experiment with different settings, and save your character to set it as
+                    your default when joining servers. Vehicle Customization enables you to customize your cars, save
+                    them, and use spawn codes from premium car packs in Vehicle Spawner.
+
+                </p>
+                <p><span style="font-weight: bolder;">F3 - </span>
+                    This is your emote menu. You can find a lot of neat emotes your character can do to increase the RP
+                    experience when playing. All of these emotes can also be run in chat using /e [emote-name]. Take a
+                    look around and pressing on any of those emotes will cause your character to perform that action.
+                    Have fun!
+                </p>
+                <p><span style="font-weight: bolder;">F6 - </span>
+                    When pressing F6 you will open a custom tailored menu specifically for California Roleplay that will
+                    display information regarding the following menus: Free Vehicles, Whitelisted Vehicles, Whitelisted
+                    Peds, Donator Packs.
+                </p>
+                <div class="button-wrapper">
+                    <button id="returnToKeys">Return to Keybinds</button>
+                    <button style="visibility: hidden;" id="goHome">Return to Menu</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="dev.js"></script>
+    <script>
+        window.addEventListener('message', (e) => {
+            if (e.data === 'componentsLoaded') {
+                const script = document.createElement('script');
+                script.src = 'keybinds.js';
+                document.body.appendChild(script);
+            }
+        });
+    </script>
+</body>
+
+</html>
+<style>
+    .header {
+        top: 20%;
+    }
+
+    .app-wrapper {
+        color: var(--text-primary);
+        top: 35px;
+    }
+</style>

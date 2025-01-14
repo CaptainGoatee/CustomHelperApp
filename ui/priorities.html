@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>CaliRP Help & Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="colors.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="phone-wrapper">
+        <br>
+        <div class="app" id="content">
+            <div class="app-wrapper">
+                <div class="header">
+                    <div class="title">California Roleplay</div>
+                    <div class="subtitle">In-Game Terminology</div>
+                </div>
+                <p><span style="font-weight: bolder;">Priority Status:</span>
+                    Listed in the HUD on the bottom left of your screen. HOLD indicates law enforcement is busy and no
+                    police chases or high priority crimes should occur. If a time is mentioned here and Priority is on
+                    Cooldown, this indicates law enforcement is taking a break from high priority calls. You must wait
+                    for the cooldown to end before starting one.
+                </p>
+                <p><span style="font-weight: bolder;">Peacetime:</span>
+                    All murder and violence should cease immediately when peace time is active. Only passive RP is
+                    allowed when peacetime is active.
+                </p>
+                <p><span style="font-weight: bolder;">POSTAL:</span>
+                    Located in the HUD on the bottom left of your screen. This indicates the area you are located on the
+                    map. You can use this in RP scenarios and to meet up with friends.
+                </p>
+
+                <div class="button-wrapper">
+                    <button id="returnToTerms">Return to Terms</button>
+                    <button style="visibility: hidden;" id="goHome">Return to Menu</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="dev.js"></script>
+    <script>
+        window.addEventListener('message', (e) => {
+            if (e.data === 'componentsLoaded') {
+                const script = document.createElement('script');
+                script.src = 'terms.js';
+                document.body.appendChild(script);
+            }
+        });
+    </script>
+</body>
+
+</html>
+<style>
+    .header {
+        top: 20%;
+    }
+
+    .app-wrapper {
+        color: var(--text-primary);
+        top: 35px;
+    }
+</style>
